@@ -17,10 +17,11 @@ public class MapConfig {
     public ConcurrentHashMap<UUID, Transaction> map() {
         ConcurrentHashMap<UUID, Transaction> map = new ConcurrentHashMap<>();
 
-//        for (int i = 0; i < 20; i++) {
-//            Transaction transaction = generateRandomTransaction();
-//            map.put(transaction.getUuid(), transaction);
-//        }
+        // generate some fake transaction data
+        for (int i = 0; i < 20; i++) {
+            Transaction transaction = generateRandomTransaction();
+            map.put(transaction.getUuid(), transaction);
+        }
 
         return map;
     }
